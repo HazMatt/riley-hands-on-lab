@@ -1,0 +1,127 @@
+fileVersion: 1
+id: 85555e13-63ce-45cd-b992-e3fb9c0a6ef6
+name: FCT_STG_NATION
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b633840-a3e6-4ff1-9613-8d6136bc06a5
+          stepCounter: 85555e13-63ce-45cd-b992-e3fb9c0a6ef6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 11e04dde-7ede-49cf-91e6-09fc0d8edf1f
+                stepCounter: 7a808f61-9abd-4c19-bc27-10459e7644f0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2344f6ca-ef24-42eb-8fdc-23c13ed583e6
+          stepCounter: 85555e13-63ce-45cd-b992-e3fb9c0a6ef6
+        config: {}
+        dataType: VARCHAR(25)
+        description: ""
+        name: N_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e11ec1ab-d062-4712-a957-358fef710eb7
+                stepCounter: 7a808f61-9abd-4c19-bc27-10459e7644f0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 756b0446-7c24-4bc7-98d1-dca1f20fd24c
+          stepCounter: 85555e13-63ce-45cd-b992-e3fb9c0a6ef6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: N_REGIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1ff24e16-a813-4dd7-aa7f-16c655da9c31
+                stepCounter: 7a808f61-9abd-4c19-bc27-10459e7644f0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 68a7b190-9498-4f93-914f-c72f4588d704
+          stepCounter: 85555e13-63ce-45cd-b992-e3fb9c0a6ef6
+        config: {}
+        dataType: VARCHAR(152)
+        description: ""
+        name: N_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 804156c9-3b82-40ca-b481-009a248445b2
+                stepCounter: 7a808f61-9abd-4c19-bc27-10459e7644f0
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d45a2ff9-50db-4246-98b4-ba65017cd7ca
+          stepCounter: 85555e13-63ce-45cd-b992-e3fb9c0a6ef6
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 14a3be97-bd5d-4945-8ab2-9902a7c568af
+          stepCounter: 85555e13-63ce-45cd-b992-e3fb9c0a6ef6
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: STG_NATION
+        join:
+          joinCondition: FROM {{ ref('SRC', 'STG_NATION') }} "STG_NATION"
+        name: FCT_STG_NATION
+        noLinkRefs: []
+  name: FCT_STG_NATION
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

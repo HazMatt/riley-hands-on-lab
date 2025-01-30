@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "3"
+mappingDefinitions:
+  SRC:
+    database: RILEY
+    schema: REACT18REGRESSION
+  TARGET:
+    database: RILEY
+    schema: REACT18REGRESSION_TARGET
+name: Testing
+type: Environment
