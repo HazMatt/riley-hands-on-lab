@@ -1,6 +1,6 @@
 fileVersion: 1
-id: adec29fb-4a1f-4635-b9a7-d590382754d5
-name: FCT_PARTSUPP
+id: 0546756b-02fa-43a2-bf19-e425f6884f04
+name: STG_CUSTOMER
 operation:
   database: ""
   dataset: ""
@@ -14,13 +14,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2ba6234c-541f-49d4-855e-b0e26a9c0f70
-          stepCounter: adec29fb-4a1f-4635-b9a7-d590382754d5
+          columnCounter: 54a44032-5f00-462e-a631-817ee1faccdf
+          stepCounter: 0546756b-02fa-43a2-bf19-e425f6884f04
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
-        description: Foreign Key to P_PARTKEY
-        name: PS_PARTKEY
+        description: SF*150,000 are populated
+        name: C_CUSTKEY
         nullable: false
         primaryKey: false
         sourceColumnReferences:
@@ -33,32 +33,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 086c6ae2-5246-4e1a-8914-cda934cc8842
-          stepCounter: adec29fb-4a1f-4635-b9a7-d590382754d5
+          columnCounter: ecabc02a-93ab-46c2-861f-60c4f2de6979
+          stepCounter: 0546756b-02fa-43a2-bf19-e425f6884f04
         config: {}
-        dataType: NUMBER(38,0)
-        defaultValue: ""
-        description: Foreign Key to S_SUPPKEY
-        name: PS_SUPPKEY
-        nullable: false
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 912a7ba0-61c9-4f67-996a-337dae024e85
-          stepCounter: adec29fb-4a1f-4635-b9a7-d590382754d5
-        config: {}
-        dataType: NUMBER(38,0)
+        dataType: VARCHAR(25)
         defaultValue: ""
         description: ""
-        name: PS_AVAILQTY
+        name: C_NAME
         nullable: false
         primaryKey: false
         sourceColumnReferences:
@@ -71,13 +52,70 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9294e35e-d109-4ea8-9ec2-8ba91f7c606e
-          stepCounter: adec29fb-4a1f-4635-b9a7-d590382754d5
+          columnCounter: ab06d513-5d31-433f-9c9d-40d1e8f7201f
+          stepCounter: 0546756b-02fa-43a2-bf19-e425f6884f04
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: ""
+        name: C_ADDRESS
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a46a5f20-880b-4f94-a1f3-bd09a2512be2
+          stepCounter: 0546756b-02fa-43a2-bf19-e425f6884f04
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Foreign Key to N_NATIONKEY
+        name: C_NATIONKEY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b20f0780-bdb7-4ca1-9ef4-b962b44499c9
+          stepCounter: 0546756b-02fa-43a2-bf19-e425f6884f04
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: ""
+        name: C_PHONE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 775db7df-a800-46cc-ba85-8a1b44f7b49b
+          stepCounter: 0546756b-02fa-43a2-bf19-e425f6884f04
         config: {}
         dataType: NUMBER(12,2)
         defaultValue: ""
         description: ""
-        name: PS_SUPPLYCOST
+        name: C_ACCTBAL
         nullable: false
         primaryKey: false
         sourceColumnReferences:
@@ -90,13 +128,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 252ad1ed-85ef-45a3-8560-ad71b0477f8e
-          stepCounter: adec29fb-4a1f-4635-b9a7-d590382754d5
+          columnCounter: 3d12dafc-63c4-40d6-af18-f64c783cdfaa
+          stepCounter: 0546756b-02fa-43a2-bf19-e425f6884f04
         config: {}
-        dataType: VARCHAR(199)
+        dataType: VARCHAR(10)
         defaultValue: ""
         description: ""
-        name: PS_COMMENT
+        name: C_MKTSEGMENT
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -109,32 +147,13 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: d3d19b43-35e9-4ca0-b99f-3d710ced405f
-          stepCounter: adec29fb-4a1f-4635-b9a7-d590382754d5
+          columnCounter: 18b68420-b8df-48ed-a3f0-9b45061d816b
+          stepCounter: 0546756b-02fa-43a2-bf19-e425f6884f04
         config: {}
-        dataType: TIMESTAMP_NTZ(9)
+        dataType: VARCHAR(117)
         defaultValue: ""
         description: ""
-        name: SYSTEM_CREATE_DATE
-        nullable: true
-        primaryKey: false
-        sourceColumnReferences:
-          - columnReferences: []
-            transform: ""
-        transform: ""
-        uniqueKey: false
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
-        columnReference:
-          columnCounter: 24b505fd-ab42-4f7e-9139-30c6ee4400f3
-          stepCounter: adec29fb-4a1f-4635-b9a7-d590382754d5
-        config: {}
-        dataType: TIMESTAMP_NTZ(9)
-        defaultValue: ""
-        description: ""
-        name: SYSTEM_UPDATE_DATE
+        name: C_COMMENT
         nullable: true
         primaryKey: false
         sourceColumnReferences:
@@ -143,11 +162,11 @@ operation:
         transform: ""
         uniqueKey: false
     join:
-      joinCondition: FROM {{ ref('SRC', 'FCT_PARTSUPP') }}
-  name: FCT_PARTSUPP
+      joinCondition: FROM {{ ref('SRC', 'STG_CUSTOMER') }}
+  name: STG_CUSTOMER
   schema: ""
   sqlType: Source
-  table: FCT_PARTSUPP
+  table: STG_CUSTOMER
   type: sourceInput
   version: 1
 type: Node
