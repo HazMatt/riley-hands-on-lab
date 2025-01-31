@@ -1,12 +1,12 @@
 fileVersion: 1
-id: 6104a1ac-aef6-472e-8cc5-32325374d2d9
+id: 74bdf119-f178-4efe-9664-ef010309c9a7
 name: V_REGION
 operation:
   database: ""
   dataset: ""
   deployEnabled: true
   description: ""
-  locationName: TARGET
+  locationName: SRC
   metadata:
     columns:
       - acceptedValues:
@@ -14,8 +14,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 5d60395a-d327-4644-abaf-edf4e652d1ab
-          stepCounter: 6104a1ac-aef6-472e-8cc5-32325374d2d9
+          columnCounter: 9ded89c6-bf84-41e2-8786-4176f8dd531d
+          stepCounter: 74bdf119-f178-4efe-9664-ef010309c9a7
         config: {}
         dataType: NUMBER(38,0)
         defaultValue: ""
@@ -33,8 +33,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a4d40dbb-29c0-4eef-8ec0-53a23b195528
-          stepCounter: 6104a1ac-aef6-472e-8cc5-32325374d2d9
+          columnCounter: a17273a5-7482-46c2-a9ee-1ce3e5a82f67
+          stepCounter: 74bdf119-f178-4efe-9664-ef010309c9a7
         config: {}
         dataType: VARCHAR(25)
         defaultValue: ""
@@ -52,8 +52,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: c13263c7-3562-441f-adbe-df78000a63a8
-          stepCounter: 6104a1ac-aef6-472e-8cc5-32325374d2d9
+          columnCounter: 0589bccc-3717-497d-a5f1-7565e8d9a2f9
+          stepCounter: 74bdf119-f178-4efe-9664-ef010309c9a7
         config: {}
         dataType: VARCHAR(152)
         defaultValue: ""
