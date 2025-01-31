@@ -1,0 +1,153 @@
+fileVersion: 1
+id: efae5cae-024d-4f10-a239-d64bb9be2e62
+name: STG_SUPPLIER
+operation:
+  database: ""
+  dataset: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f113837e-e337-4250-92b3-0a672d9790b1
+          stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Supplier key, a surrogate key. It is populated with values multiplied by 10,000 from the source column S_SUPPKEY of the SUPPLIER table.
+        name: S_SUPPKEY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a159fac0-edd4-4cf3-9fb6-67eae90e2196
+          stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+        config: {}
+        dataType: VARCHAR(25)
+        defaultValue: ""
+        description: Supplier name, derived from the source column S_NAME of the SUPPLIER table.
+        name: S_NAME
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0feecde7-a328-42a6-8420-55372eafc52a
+          stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+        config: {}
+        dataType: VARCHAR(40)
+        defaultValue: ""
+        description: Supplier address, derived from the source column S_ADDRESS of the SUPPLIER table.
+        name: S_ADDRESS
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8327c94-c0f8-46e9-b7c0-788d70124fd5
+          stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: Foreign key to N_NATIONKEY, derived from the source column S_NATIONKEY of the SUPPLIER table.
+        name: S_NATIONKEY
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d2dfaad5-8ecf-4f15-b367-c096b8d1cdc8
+          stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+        config: {}
+        dataType: VARCHAR(15)
+        defaultValue: ""
+        description: Supplier phone number, derived from the source column S_PHONE of the SUPPLIER table.
+        name: S_PHONE
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03fda9d7-2a69-4f21-b3d5-aa8c4786283b
+          stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+        config: {}
+        dataType: NUMBER(12,2)
+        defaultValue: ""
+        description: Supplier account balance, derived from the source column S_ACCTBAL of the SUPPLIER table.
+        name: S_ACCTBAL
+        nullable: false
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 63b90732-8d5a-4bdc-9395-f4816f0ae3c1
+          stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+        config: {}
+        dataType: VARCHAR(101)
+        defaultValue: ""
+        description: Comments about the supplier. Derived from the source column S_COMMENT of the SUPPLIER table.
+        name: S_COMMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+    join:
+      joinCondition: FROM {{ ref('SRC', 'STG_SUPPLIER') }}
+  name: STG_SUPPLIER
+  schema: ""
+  sqlType: Source
+  table: STG_SUPPLIER
+  type: sourceInput
+  version: 1
+type: Node
