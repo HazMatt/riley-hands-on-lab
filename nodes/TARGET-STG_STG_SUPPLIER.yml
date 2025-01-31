@@ -1,0 +1,137 @@
+fileVersion: 1
+id: fcc84543-2570-4f4f-83fb-4c23ef703c92
+name: STG_STG_SUPPLIER
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a131cd22-fda3-4812-a583-37a55a8667a8
+          stepCounter: fcc84543-2570-4f4f-83fb-4c23ef703c92
+        config: {}
+        dataType: NUMBER(38,0)
+        description: Supplier key, a surrogate key. It is populated with values multiplied by 10,000 from the source column S_SUPPKEY of the SUPPLIER table.
+        name: S_SUPPKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f113837e-e337-4250-92b3-0a672d9790b1
+                stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88e0ad8f-1321-4d76-9941-593e844a20ee
+          stepCounter: fcc84543-2570-4f4f-83fb-4c23ef703c92
+        config: {}
+        dataType: VARCHAR(25)
+        description: Supplier name, derived from the source column S_NAME of the SUPPLIER table.
+        name: S_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a159fac0-edd4-4cf3-9fb6-67eae90e2196
+                stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1457cd1d-8cf0-4ac0-ab8b-e1a7f00dfbc6
+          stepCounter: fcc84543-2570-4f4f-83fb-4c23ef703c92
+        config: {}
+        dataType: VARCHAR(40)
+        description: Supplier address, derived from the source column S_ADDRESS of the SUPPLIER table.
+        name: S_ADDRESS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0feecde7-a328-42a6-8420-55372eafc52a
+                stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c450576f-4d26-4f3c-b860-c705268bb1c7
+          stepCounter: fcc84543-2570-4f4f-83fb-4c23ef703c92
+        config: {}
+        dataType: NUMBER(38,0)
+        description: Foreign key to N_NATIONKEY, derived from the source column S_NATIONKEY of the SUPPLIER table.
+        name: S_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f8327c94-c0f8-46e9-b7c0-788d70124fd5
+                stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c65ac9b0-9828-4296-9c5b-51e8923e8217
+          stepCounter: fcc84543-2570-4f4f-83fb-4c23ef703c92
+        config: {}
+        dataType: VARCHAR(15)
+        description: Supplier phone number, derived from the source column S_PHONE of the SUPPLIER table.
+        name: S_PHONE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d2dfaad5-8ecf-4f15-b367-c096b8d1cdc8
+                stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bfaf37db-8b84-40c7-b919-0fb008782a34
+          stepCounter: fcc84543-2570-4f4f-83fb-4c23ef703c92
+        config: {}
+        dataType: NUMBER(12,2)
+        description: Supplier account balance, derived from the source column S_ACCTBAL of the SUPPLIER table.
+        name: S_ACCTBAL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 03fda9d7-2a69-4f21-b3d5-aa8c4786283b
+                stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87e5ba5f-acc2-4bc2-bfa3-d11f9186504c
+          stepCounter: fcc84543-2570-4f4f-83fb-4c23ef703c92
+        config: {}
+        dataType: VARCHAR(101)
+        description: Comments about the supplier. Derived from the source column S_COMMENT of the SUPPLIER table.
+        name: S_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 63b90732-8d5a-4bdc-9395-f4816f0ae3c1
+                stepCounter: efae5cae-024d-4f10-a239-d64bb9be2e62
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: STG_SUPPLIER
+        join:
+          joinCondition: FROM {{ ref('SRC', 'STG_SUPPLIER') }} "STG_SUPPLIER"
+        name: STG_STG_SUPPLIER
+        noLinkRefs: []
+  name: STG_STG_SUPPLIER
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
