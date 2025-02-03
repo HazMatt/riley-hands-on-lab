@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "7"
+includeSelector: "{ location: TARGET name: STG_STG_CUSTOMER_TESTMO_REGRESSION } OR { location: TARGET name: FCT_STG_PART }"
+name: My new job
+type: Job
